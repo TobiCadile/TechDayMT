@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compañía Telefónica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <img src="./assets/company_logo.png" alt="Logo Compañía Telefónica">
+    <h1>Global Connect</h1>
+    <h2>Compañía Telefónica Internacional</h2>
+</header>
+
+<div class="container">
+    <!-- Columnas para ciudades y servicios -->
+    <div class="column">
+        <h2>Nuestras Sedes</h2>
+        <ul>
+            <li>Nueva York: +1 123-456-7890</li>
+            <li>Londres: +44 20 7946 0958</li>
+            <li>Tokio: +81 3-1234-5678</li>
+            <li>Sídney: +61 2 9876 5432</li>
+            <li>Praga: +420 2 1234 5678</li>
+            <li>El Cairo: +20 2 1234 5678</li>
+            <li>Madrid: +34 91 123 4567</li>
+            <li>Berlín: +49 30 1234 5678</li>
+            <li>Moscú: +7 495 123 4567</li>
+            <li>Delhi: +91 11 1234 5678</li>
+            <li>Roma: +39 06 1234 5678</li>
+            <li>Río de Janeiro: +55 21 1234 5678</li>
+            <li>París: +33 1 23 45 67 89</li>
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>Servicios</h2>
+        <p>Ofrecemos una amplia variedad de planes para satisfacer tus necesidades.</p>
+        <ul>
+            <li>Plan Global: Servicio completo en cualquier lugar del mundo, sin límite de usuarios.</li>
+            <li>Plan Ejecutivo: Servicio parcial en áreas seleccionadas, 20 usuarios máximo.</li>
+            <li>Plan Familiar: Cuenta de máximo 4 dispositivos con cobertura doméstica asegurada.</li>
+        </ul>
+        <p>Cualquier plan incluye:</p>
+        <ul>
+            <li>Datos ilimitados</li>
+            <li>Llamadas internacionales</li>
+            <li>Roaming global</li>
+            <li>5G en todo el mundo</li>
+            <li>Soporte 24/7</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Formulario de login que ocupa el ancho de la página -->
+<div class="login">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="username" placeholder="Nombre de usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="login()">Iniciar Sesión</button>
+</div>
+
+<!-- Script de login -->
+<script>
+    // Función de inicio de sesión
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Lista de usuarios y contraseñas
+        const validUsers = [
+            { username: "agente001", password: "alpha001" },
+            { username: "agente002", password: "bravo002" },
+            { username: "agente003", password: "charlie003" },
+            { username: "agente004", password: "delta004" },
+            { username: "agente005", password: "echo005" },
+            { username: "agente006", password: "foxtrot006" },
+            { username: "agente007", password: "golf007" },
+            { username: "agente008", password: "hotel008" },
+            { username: "agente009", password: "india009" }
+        ];
+
+        // Verificar si el nombre de usuario y la contraseña coinciden con algún par válido
+        const validUser = validUsers.find(user => user.username === username && user.password === password);
+
+        if (validUser) {
+            localStorage.setItem('agentName', validUser.username);  // Guardar el nombre del agente
+            window.location.href = 'secret.html';  // Redirigir a la página secreta
+        } else {
+            alert('Nombre de usuario o contraseña incorrectos');
+        }
+    }
+</script>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Compañía Telefónica Internacional. Todos los derechos reservados.</p>
+    <p>Contacto: contacto@companiatelefonica.com</p>
+</div>
+
+</body>
+</html>

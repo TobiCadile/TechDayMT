@@ -1,0 +1,65 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Estilo de la sección de login */
+.login {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.login input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #003f7f;
+}
+
+/* Estilos para la página secreta */
+body.dark-mode {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.secret-message {
+    max-width: 500px;
+    margin: auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+}
